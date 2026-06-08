@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+
+# Local dev tooling & preview config (not part of the site)
+.claude/
+
+# Unrelated projects living in this folder — NOT part of The Good Turn site
+mr-diagnostic/
+mr-report-generator/
+
+# Old standalone exports (superseded by index.html)
+the-good-turn-website*.html
+
+# Misc assets not used by the site
+GT GR Code.png
+
+# Backups
+*.bak
