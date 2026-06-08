@@ -141,8 +141,8 @@
   #testimonials::before { content: ""; position: absolute; inset: 0; background: rgba(253,232,235,0.88); z-index: 0; }
   #testimonials .section-inner { position: relative; z-index: 1; }
   .testimonial-placeholder { max-width: 600px; margin: 0 auto; padding: 40px 0; }
-  .testimonial-placeholder blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 26px; font-weight: 300; line-height: 1.7; color: var(--pink-deep); margin-bottom: 20px; }
-  .testimonial-placeholder cite { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 300; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-light); font-style: normal; }
+  .testimonial-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 34px; font-weight: 600; letter-spacing: 0.5px; line-height: 1.2; color: var(--pink-deep); margin-bottom: 18px; }
+  .testimonial-body { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.75; color: var(--text); }
 
   /* CONTACT */
   #contact { background: var(--cream); text-align: center; }
@@ -242,7 +242,7 @@
           Based in Dunoon, Argyll<br>
           Serving the local community<br>
           Eco-friendly products throughout<br>
-          Fully insured · Reliable · Local
+          Local · Reliable · Careful with the details
         </p>
       </div>
     </div>
@@ -326,7 +326,7 @@
       </div>
       <div class="step">
         <span class="step-number">03</span>
-        <h3>We Clean</h3>
+        <h3>We Prepare</h3>
         <p>We arrive on time, with everything we need. You come home — or your guests arrive — to somewhere that feels truly cared for.</p>
       </div>
     </div>
@@ -343,7 +343,7 @@
     <div class="rate-pill">£20 per hour · All products included</div>
     <div class="pricing-tables">
       <div class="pricing-table">
-        <h3>Holiday Let &amp; Airbnb</h3>
+        <h3>Guest Changeovers</h3>
         <div class="price-row">
           <div><span class="price-row-name">Studio / One Bedroom</span><span class="price-row-detail">approx. 2 hrs</span></div>
           <span class="price-row-amount"><span class="from">from </span>£40</span>
@@ -362,7 +362,7 @@
         </div>
       </div>
       <div class="pricing-table">
-        <h3>Domestic Home Cleaning</h3>
+        <h3>Home Care Cleans</h3>
         <div class="price-row">
           <div><span class="price-row-name">Two Bedroom</span><span class="price-row-detail">approx. 2 hrs</span></div>
           <span class="price-row-amount"><span class="from">from </span>£40</span>
@@ -383,10 +383,10 @@
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-inner">
-    <span class="section-label">Kind Words</span>
+    <span class="section-label">Just Beginning</span>
     <div class="testimonial-placeholder">
-      <blockquote>"We're just getting started — but we can't wait to share what our clients say. Watch this space."</blockquote>
-      <cite>The Good Turn · Dunoon, Argyll</cite>
+      <h2 class="testimonial-heading">First bookings now open</h2>
+      <p class="testimonial-body">We're currently taking our first local bookings across Dunoon and the surrounding area. Early clients will help shape The Good Turn as it grows.</p>
     </div>
   </div>
 </section>
@@ -396,8 +396,8 @@
   <div class="section-inner">
     <img src="images/contact-towels-keys.jpg" class="section-image" alt="Folded fresh towels, keys and wildflowers laid out on a bed" />
     <span class="section-label">Let's Talk</span>
-    <h2 class="section-title">Make an Enquiry</h2>
-    <p class="contact-sub">We'd love to hear from you. Fill in our short form and we'll be in touch — or if you'd rather just send a message, WhatsApp works perfectly.</p>
+    <h2 class="section-title">Tell us what needs turning</h2>
+    <p class="contact-sub">Send a few details about the property, the service you need and the timing. We'll come back to confirm what's possible, what it will cost and what we'll need from you.</p>
     <!-- NOTE: Formspree endpoint left unchanged per request. Laura to confirm ownership and swap this action URL later. -->
     <form class="enquiry-form" action="https://formspree.io/f/mwvrwood" method="POST">
       <div class="form-row">
@@ -419,8 +419,9 @@
           <label for="service">Service Needed</label>
           <select id="service" name="service" required>
             <option value="" disabled selected>Please select…</option>
-            <option value="Holiday Let / Airbnb">Holiday Let / Airbnb</option>
-            <option value="Domestic Home Cleaning">Domestic Home Cleaning</option>
+            <option value="Guest Changeovers">Guest Changeovers</option>
+            <option value="Home Care Cleans">Home Care Cleans</option>
+            <option value="Reset Cleans">Reset Cleans</option>
           </select>
         </div>
         <div class="form-group">
