@@ -212,7 +212,7 @@ select:focus-visible, textarea:focus-visible {
   position: relative; min-height: 66vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 150px 40px 90px;
-  background: url("images/services-bedroom.jpg") center center/cover no-repeat; overflow: hidden;
+  background: url("images/pricing-hero-living-room.jpg") center center/cover no-repeat; overflow: hidden;
 }
 .page-hero-overlay { position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(to bottom, rgba(40,54,60,0.52) 0%, rgba(40,54,60,0.34) 55%, rgba(40,54,60,0.56) 100%); }
@@ -317,3 +317,13 @@ select:focus-visible, textarea:focus-visible {
 /* Centered section helper (closing block) */
 .text-center { text-align: center; }
 .text-center .prose p, .text-center .statement { margin-left: auto; margin-right: auto; }
+
+/* Pricing page imagery: lead image spacing + image-beside-text split */
+.section-image.lead-img { margin-bottom: 50px; }
+.pricing-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 44px; }
+.pricing-split .section-title { margin-bottom: 18px; }
+.pricing-split .prose p { margin-bottom: 0; }
+@media (max-width: 768px) {
+  .pricing-split { grid-template-columns: 1fr; gap: 30px; }
+  .section-image.lead-img { margin-bottom: 36px; }
+}
