@@ -74,28 +74,27 @@
       </ul>
     </div>
 
-    <!-- Good Turn Note panel (within the changeover area) -->
-    <div class="panel" style="margin-top:40px;">
-      <h3>Every changeover ends with a Good Turn Note</h3>
-      <p>Your note confirms:</p>
-      <ul class="panel-list">
-        <li>That the visit is complete</li>
-        <li>The completion time</li>
-        <li>That the property has been secured</li>
-        <li>Any supplies running low</li>
-        <li>Damage, missing items or maintenance concerns</li>
-        <li>Four to six photographs of the prepared property</li>
-      </ul>
-      <p class="panel-sub">For home-care visits, a brief completion message is available if requested. Photographs are never taken inside a private home unless the customer has expressly agreed.</p>
+    <!-- The Good Turn Note as a real paper note (the page's single card) -->
+    <div class="paper-note" style="margin-top:44px;">
+      <div class="paper-note-ribbon"></div>
+      <div class="paper-note-body">
+        <h3>A wee note before we go</h3>
+        <p>Hi Sarah, that's me finished at the cottage.</p>
+        <p>Everything is ready for the next guests and the house is locked up. You're getting a little low on washing-up liquid, and the bathroom window catch feels loose. I've added a photo so you can see it.</p>
+        <p>The finishing photos are attached.</p>
+        <p class="sign">Laura</p>
+      </div>
     </div>
+    <p class="fine-print">Every changeover ends with a note like this. For home care a brief message is available on request, and we never photograph a private home unless you have asked.</p>
 
-    <!-- Linen callout, beside the bedroom image -->
-    <div class="pricing-split" style="margin-top:52px;">
+    <!-- Linen: open image-and-copy split, no coloured box -->
+    <div class="pricing-split" style="margin-top:56px;">
       <img src="images/pricing-bedroom.jpg" class="section-image" alt="A guest bedroom with Harris-tweed cushions, a lamp and a sea view" />
-      <div class="panel">
-        <h3>Your linen, cared for by us</h3>
-        <p>The Good Turn does not supply bedding or towels. Hosts provide enough clean sets for each arrival. We can wash, dry and fold host-owned linen for £18 per standard machine load.</p>
-        <p class="panel-sub">Laundry collected during a changeover is returned at the next agreed visit, so a same-day changeover cannot rely on it for that day's guests. Linen stays the host's property. Heavily stained or damaged items are photographed and reported, and stain removal cannot be guaranteed.</p>
+      <div>
+        <span class="section-label">Linen</span>
+        <p class="linen-statement">The Good Turn washes the host's linen. We do not supply it.</p>
+        <div class="prose"><p>Hosts provide enough clean sets for each arrival. We can wash, dry and fold host-owned linen for £18 per standard machine load.</p></div>
+        <p class="fine-print">Laundry collected during a changeover is returned at the next agreed visit, so a same-day changeover cannot rely on it for that day's guests. Linen stays the host's property. Heavily stained or damaged items are photographed and reported, and stain removal cannot be guaranteed.</p>
       </div>
     </div>
   </div>
@@ -108,10 +107,10 @@
     <span class="section-label">Optional extras</span>
     <h2 class="section-title">Build the service your property needs</h2>
     <div class="prose"><p>Add only what the property needs. Each item is a fixed or starting price, included in your quote before booking.</p></div>
-    <div class="services-grid" style="margin-top:40px;">
-      <div class="service-card">
+    <div class="bolt-columns">
+      <div class="bolt-col">
         <h3>Property details</h3>
-        <p>Extra bathroom, additional bed, sofa bed, cot and pet hair.</p>
+        <p class="bolt-desc">Extra bathroom, additional bed, sofa bed, cot and pet hair.</p>
         <ul class="price-rows">
           <li><span>Extra bathroom or shower room</span><span class="amt">£12</span></li>
           <li><span>Extra bed</span><span class="amt">£8</span></li>
@@ -121,9 +120,9 @@
           <li><span>Separate utility or boot room</span><span class="amt">£8</span></li>
         </ul>
       </div>
-      <div class="service-card">
+      <div class="bolt-col">
         <h3>Laundry and deeper cleaning</h3>
-        <p>Host-owned laundry, oven, fridge, cupboards, windows and limescale.</p>
+        <p class="bolt-desc">Host-owned laundry, oven, fridge, cupboards, windows and limescale.</p>
         <ul class="price-rows">
           <li><span>Host-owned laundry, per load</span><span class="amt">£18</span></li>
           <li><span>Inside oven</span><span class="amt">£25</span></li>
@@ -136,9 +135,9 @@
           <li><span>Storage or owner cupboard clean</span><span class="amt">From £10</span></li>
         </ul>
       </div>
-      <div class="service-card">
+      <div class="bolt-col">
         <h3>Help between bookings</h3>
-        <p>Stock counts, shopping, keys, inspections and tradesperson access.</p>
+        <p class="bolt-desc">Stock counts, shopping, keys, inspections and tradesperson access.</p>
         <ul class="price-rows">
           <li><span>Guest supply stock count</span><span class="amt">£8</span></li>
           <li><span>Shopping or emergency restock</span><span class="amt">£12 + goods</span></li>
@@ -217,7 +216,7 @@
       <div>
         <span class="section-label">Worked example</span>
         <h2 class="col-title">See how a price is built</h2>
-        <div class="example-card" style="margin-top:6px;">
+        <div style="margin-top:6px;">
           <h3 class="block-title">Three-bedroom, pet-friendly let</h3>
           <p class="example-meta">Two bathrooms, four beds and one load of host-owned laundry.</p>
           <table class="price-table">

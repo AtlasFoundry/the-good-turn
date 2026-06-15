@@ -406,8 +406,47 @@ html { scroll-padding-top: 72px; } /* offset for the fixed nav on anchor jumps *
 
 /* "When a property needs extra care" — a quiet transparency note, not an alert */
 .section-slim { padding-top: 60px; padding-bottom: 60px; }
-.transparency-note { background: var(--warm-white); border: 1px solid var(--rule); border-left: 3px solid var(--green-deep); border-radius: 10px; padding: 26px 30px; max-width: 760px; }
+/* Open transparency note: just a narrow green rule on the left, no container, no fill */
+.transparency-note { background: transparent; border: none; border-left: 3px solid var(--green-deep); border-radius: 0; padding: 2px 0 2px 30px; max-width: 720px; }
 .transparency-note h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 600; letter-spacing: 0.2px; color: var(--text); margin-bottom: 12px; }
 .transparency-note p { font-family: 'EB Garamond', Georgia, serif; font-size: 17px; line-height: 1.7; color: var(--text); }
-.transparency-note .rate-line { display: inline-block; background: var(--green-pale); border: 1px solid var(--green-light); border-radius: 8px; padding: 10px 18px; margin: 16px 0 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: 0.3px; color: var(--green-deep); }
+.transparency-note .rate-line { display: block; background: none; border: none; padding: 0; margin: 14px 0 12px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(22px, 3vw, 27px); font-weight: 700; letter-spacing: 0.3px; color: var(--green-deep); }
 .transparency-note .clarify { font-size: 15.5px; line-height: 1.6; color: #555; }
+
+/* ============================================================
+   PRICING DE-BOXING — green as accent, open editorial layouts.
+   The paper note is the page's single intentional card.
+   ============================================================ */
+
+/* The Good Turn Note as a real paper note (the one allowed card) */
+.paper-note { background: var(--warm-white); border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 6px 20px rgba(92,119,130,0.07); overflow: hidden; max-width: 620px; }
+.paper-note-ribbon { height: 6px; background: repeating-linear-gradient(90deg, var(--green-deep) 0 14px, var(--green) 14px 20px, var(--slate) 20px 30px, var(--pink-deep) 30px 33px, var(--green) 33px 40px); opacity: 0.82; }
+.paper-note-body { padding: 28px 32px 30px; }
+.paper-note-body h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 23px; font-weight: 600; letter-spacing: 0.3px; color: var(--green-deep); margin-bottom: 16px; }
+.paper-note-body p { font-family: 'EB Garamond', Georgia, serif; font-size: 17px; line-height: 1.7; color: var(--text); }
+.paper-note-body p + p { margin-top: 14px; }
+.paper-note-body .sign { margin-top: 16px; }
+
+/* Prominent linen statement (open, no box) */
+.linen-statement { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(22px, 2.6vw, 27px); font-weight: 600; line-height: 1.25; letter-spacing: 0.3px; color: var(--green-deep); margin-bottom: 18px; }
+
+/* Open bolt-on columns with fine vertical dividers (stack with horizontal rules on mobile) */
+.bolt-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 44px; }
+.bolt-col { padding: 0 32px; }
+.bolt-col:first-child { padding-left: 0; }
+.bolt-col:last-child { padding-right: 0; }
+.bolt-col + .bolt-col { border-left: 1px solid var(--rule); }
+.bolt-col h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: 0.3px; color: var(--green-deep); margin-bottom: 8px; }
+.bolt-col .bolt-desc { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 15px; line-height: 1.55; color: var(--text-light); margin-bottom: 4px; }
+
+/* De-boxed worked example: open table */
+.example-meta { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 16px; color: var(--text-light); margin-bottom: 18px; }
+
+/* Readable secondary copy (replaces filled-panel sub-text) */
+.fine-print { font-family: 'EB Garamond', Georgia, serif; font-size: 15px; line-height: 1.65; color: #555; margin-top: 16px; max-width: 600px; }
+
+@media (max-width: 768px) {
+  .bolt-columns { grid-template-columns: 1fr; }
+  .bolt-col { padding: 0; }
+  .bolt-col + .bolt-col { border-left: none; border-top: 1px solid var(--rule); margin-top: 30px; padding-top: 30px; }
+}
