@@ -327,3 +327,34 @@ select:focus-visible, textarea:focus-visible {
   .pricing-split { grid-template-columns: 1fr; gap: 30px; }
   .section-image.lead-img { margin-bottom: 36px; }
 }
+
+/* ============================================================
+   PRICING PAGE v2 — fewer containers: jump links, bolt-on cards,
+   two-column blocks, compact price rows
+   ============================================================ */
+html { scroll-padding-top: 72px; } /* offset for the fixed nav on anchor jumps */
+
+/* Three service jump links beneath the hero */
+.jump-band { background: var(--cream); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 24px; text-align: center; }
+.service-jump a { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green-deep); text-decoration: none; transition: color 0.2s; }
+.service-jump a:hover { color: var(--green); }
+.service-jump .sep { color: var(--text-light); margin: 0 16px; }
+
+/* Compact price rows inside bolt-on cards */
+.price-rows { list-style: none; margin-top: 18px; border-top: 1px solid var(--rule); }
+.price-rows li { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 11px 0; border-bottom: 1px dotted var(--rule); font-family: 'EB Garamond', Georgia, serif; font-size: 16px; line-height: 1.4; color: var(--text); }
+.price-rows li:last-child { border-bottom: none; }
+.price-rows .amt { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 600; color: var(--green-deep); white-space: nowrap; }
+
+/* Two-column content blocks (home care/reset, travel/example) */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.col-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(28px, 3.6vw, 38px); font-weight: 600; letter-spacing: 0.5px; line-height: 1.12; margin-bottom: 14px; color: var(--text); }
+
+/* Linen callout: panel sits flush beside its image, with quieter supporting copy */
+.pricing-split .panel { margin-top: 0; }
+.panel .panel-sub { font-size: 14.5px; line-height: 1.65; color: var(--text-light); margin-top: 14px; }
+
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; gap: 44px; }
+  .service-jump .sep { margin: 0 10px; }
+}
