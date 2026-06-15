@@ -110,7 +110,7 @@
   #how { background: var(--green-deep); color: var(--warm-white); }
   #how .section-label { color: var(--green-light); }
   #how .section-title { color: var(--warm-white); }
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 56px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 56px; }
   .step { text-align: center; padding: 0 16px; }
   .step-number { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 72px; font-weight: 300; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 16px; display: block; }
   .step h3 { font-size: 22px; font-weight: 600; letter-spacing: 1px; margin-bottom: 12px; color: var(--warm-white); }
@@ -352,9 +352,54 @@ html { scroll-padding-top: 72px; } /* offset for the fixed nav on anchor jumps *
 
 /* Linen callout: panel sits flush beside its image, with quieter supporting copy */
 .pricing-split .panel { margin-top: 0; }
-.panel .panel-sub { font-size: 14.5px; line-height: 1.65; color: var(--text-light); margin-top: 14px; }
+.panel .panel-sub { font-size: 15px; line-height: 1.65; color: #555; margin-top: 14px; }
 
 @media (max-width: 768px) {
   .two-col { grid-template-columns: 1fr; gap: 44px; }
   .service-jump .sep { margin: 0 10px; }
 }
+
+/* ============================================================
+   THE GOOD TURN NOTE — feature, sample card, trust strip, form help
+   ============================================================ */
+
+/* Four-step How It Works: 2x2 on tablet, 1 column on mobile (mobile rule already set) */
+@media (min-width: 769px) and (max-width: 1000px) { .steps { grid-template-columns: repeat(2, 1fr); gap: 40px 32px; } }
+
+/* Good Turn Note feature section */
+#good-turn-note { background: var(--cream); }
+.note-feature { align-items: center; }
+
+/* The sample note card — a thoughtful local note, not a software dashboard */
+.note-card { background: var(--warm-white); border: 1px solid var(--rule); border-radius: 16px; box-shadow: 0 14px 38px rgba(92,119,130,0.12); overflow: hidden; }
+/* Restrained tartan ribbon across the top */
+.note-card-ribbon { height: 7px; background:
+  repeating-linear-gradient(90deg, var(--green-deep) 0 14px, var(--green) 14px 20px, var(--slate) 20px 30px, var(--pink-deep) 30px 33px, var(--green) 33px 40px); opacity: 0.9; }
+.note-card-head { display: flex; align-items: center; gap: 11px; padding: 18px 26px; border-bottom: 1px solid var(--rule); background: var(--green-pale); }
+.note-card-head svg { width: 22px; height: 26px; flex: 0 0 auto; }
+.note-card-head span { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; letter-spacing: 0.5px; color: var(--green-deep); }
+.note-card-body { padding: 26px 28px 28px; }
+.note-card-body > * { font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.6; color: var(--text); }
+.note-time { font-weight: 500; margin-bottom: 18px; }
+.note-checks { list-style: none; margin: 0 0 18px; }
+.note-checks li { position: relative; padding: 6px 0 6px 30px; }
+.note-checks li::before { content: ""; position: absolute; left: 3px; top: 0.7em; width: 12px; height: 7px; border-left: 2.5px solid var(--green); border-bottom: 2.5px solid var(--green); transform: rotate(-45deg); }
+.note-card-body p + p { margin-top: 14px; }
+.note-photos { margin-top: 18px; padding-top: 16px; border-top: 1px dotted var(--rule); color: var(--green-deep); font-weight: 500; }
+
+/* Trust strip near the enquiry section */
+#trust { background: var(--warm-white); }
+.trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 8px; }
+.trust-item { border-top: 2px solid var(--green-light); padding-top: 20px; }
+.trust-item h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; letter-spacing: 0.3px; color: var(--green-deep); margin-bottom: 10px; line-height: 1.2; }
+.trust-item p { font-family: 'EB Garamond', Georgia, serif; font-size: 17px; line-height: 1.6; color: var(--text); }
+@media (min-width: 769px) and (max-width: 1000px) { .trust-strip { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+@media (max-width: 768px) { .trust-strip { grid-template-columns: 1fr; gap: 26px; } }
+
+/* Form helper text (readable, not pale grey, upright) */
+.field-help { font-family: 'EB Garamond', Georgia, serif; font-size: 14.5px; line-height: 1.5; color: #5d5d5d; margin-top: 4px; text-transform: none; letter-spacing: 0; }
+
+/* Pricing-page Good Turn Note panel sits inside the changeover area */
+.panel .panel-list { list-style: none; margin: 10px 0 0; }
+.panel .panel-list li { position: relative; padding: 6px 0 6px 26px; font-family: 'EB Garamond', Georgia, serif; font-size: 16.5px; line-height: 1.55; color: var(--text); }
+.panel .panel-list li::before { content: ""; position: absolute; left: 2px; top: 0.66em; width: 11px; height: 6px; border-left: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(-45deg); }
