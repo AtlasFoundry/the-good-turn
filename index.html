@@ -414,6 +414,8 @@
     <p class="contact-sub">Send a few details about the property, the service you need and the timing. We'll come back to confirm what's possible, what it will cost and what we'll need from you.</p>
     <!-- Enquiry form posts to The Good Turn's confirmed Formspree endpoint. -->
     <form class="enquiry-form" action="https://formspree.io/f/mwvrwood" method="POST">
+      <!-- Sets the subject line on the Formspree notification email. -->
+      <input type="hidden" name="_subject" value="New enquiry — The Good Turn website">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -465,7 +467,7 @@
       </div>
       <button type="submit" class="form-submit">Send Enquiry</button>
     </form>
-    <p class="form-success" id="form-success">Thank you — we'll be in touch soon.</p>
+    <p class="form-success" id="form-success">Thank you — we've received your enquiry and will come back to you shortly to confirm what's possible, the cost, and anything we'll need. In the meantime you're welcome to reach us on WhatsApp.</p>
     <script>
       const form = document.querySelector('.enquiry-form');
       form.addEventListener('submit', async function(e) {
