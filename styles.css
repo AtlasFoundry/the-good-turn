@@ -450,3 +450,7 @@ html { scroll-padding-top: 72px; } /* offset for the fixed nav on anchor jumps *
   .bolt-col { padding: 0; }
   .bolt-col + .bolt-col { border-left: none; border-top: 1px solid var(--rule); margin-top: 30px; padding-top: 30px; }
 }
+
+/* Make the logo read as a clickable home link */
+.nav-brand { transition: color 0.2s; }
+.nav-brand:hover { color: var(--green-deep); }
