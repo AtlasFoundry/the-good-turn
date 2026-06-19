@@ -369,7 +369,13 @@ html { scroll-padding-top: 72px; } /* offset for the fixed nav on anchor jumps *
 
 /* Good Turn Note feature section */
 #good-turn-note { background: var(--cream); }
-.note-feature { align-items: center; }
+.note-feature { align-items: start; }
+
+/* Pricing page: compact "note is included" confirmation (open, narrow green rule, no box) */
+.note-confirm { margin-top: 40px; border-left: 3px solid var(--green-deep); padding-left: 26px; max-width: 720px; }
+.note-confirm > p { font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.7; color: var(--text); }
+.note-confirm strong { font-weight: 600; color: var(--green-deep); }
+.note-confirm .fine-print { margin-top: 12px; }
 
 /* The sample note card — a thoughtful local note, not a software dashboard */
 .note-card { background: var(--warm-white); border: 1px solid var(--rule); border-radius: 16px; box-shadow: 0 14px 38px rgba(92,119,130,0.12); overflow: hidden; }
